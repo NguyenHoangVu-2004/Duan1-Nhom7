@@ -154,7 +154,7 @@
                 
                 <!-- MAIN CHÍNH (CẦN SỬA) -->
                 <div class="container-fluid">
-                    <h1>Đánh giá</h1>
+                    <h1>Title</h1>
                 </div>
             </div>
             <!-- Footer -->
