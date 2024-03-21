@@ -155,6 +155,20 @@
                 <!-- MAIN CHÍNH (CẦN SỬA) -->
                 <div class="container-fluid">
                     <h1>Đánh giá</h1>
+                    <table align="center">
+                        <tr>
+                            <th>ID đánh giá</th>
+                            <th>Ngày đăng</th>
+                            <th>Người đánh giá</th>
+                            <th>Ảnh sản phâm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số sao đánh giá</th>
+                            <th>Nội dung đánh giá</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <!-- Footer -->
