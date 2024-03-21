@@ -7,12 +7,12 @@ define('PATH_VIEW',         __DIR__ . '/../views/');
 
 define('PATH_UPLOAD',       __DIR__ . '/../');
 
-define('BASE_URL',          'http://localhost/base-duan1/');
+define('BASE_URL',          'http://localhost/duan1/');
 
 define('DB_HOST',           'localhost');
 define('DB_PORT',           '3306');
 define('DB_USERNAME',       'root');
 define('DB_PASSWORD',       '');
-define('DB_NAME',           'base-duan1');
+define('DB_NAME',           'duan1');
 
 
