@@ -33,6 +33,8 @@ if($act == 'home'){
     // require_once PATH_VIEW . 'home.php';
 }else if($act == 'danhgia'){
     danhgia();
+}else{
+
 }
 
 // Kiểm tra xem user đã đăng nhập chưa

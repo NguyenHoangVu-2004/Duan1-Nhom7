@@ -98,7 +98,18 @@ if (!function_exists('listAll')) {
         }
     }
 }
+function getAll($sql) {
+    try {
+        
+        $stmt = $GLOBALS['conn']->prepare($sql);
 
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    } catch (\Exception $e) {
+        debug($e);
+    }
+}
 if (!function_exists('showOne')) {
     function showOne($tableName, $id) {
         try {
