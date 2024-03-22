@@ -1,5 +1,6 @@
 <?php
-include "env.php";
+require_once __DIR__ . '/env.php';
+
 // Kết nối CSDL
 $host = DB_HOST;
 $port = DB_PORT;
