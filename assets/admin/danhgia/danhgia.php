@@ -165,15 +165,15 @@
                             <th>Số sao đánh giá</th>
                             <th>Nội dung đánh giá</th>
                         </tr>
-                        <?php foreach ($danhgia as $row) : ?>
+                        <?php foreach ($danhgia as $danhgia) : ?>
                             <tr>
-                                <td><?php echo $row['id_danh_gia']; ?></td>
-                                <td><?php echo $row['ngay_dang']; ?></td>
+                                <td><?php echo $danhgia['id_danh_gia']; ?></td>
+                                <td><?php echo $danhgia['ngay_dang']; ?></td>
                                 <td><?php  ?></td>
                                 <td><?php ?></td>
                                 <td><?php  ?></td>
-                                <td><?php echo $row['sao_danh_gia']; ?></td>
-                                <td><?php echo $row['noidung_danhgia']; ?></td>
+                                <td><?php echo $danhgia['sao_danh_gia']; ?></td>
+                                <td><?php echo $danhgia['noidung_danhgia']; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
