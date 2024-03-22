@@ -1,7 +1,7 @@
 <?php 
 
 // Require file trong commons
-require_once './commons/env.php';
+// require_once './commons/env.php';
 require_once './commons/helper.php';
 require_once './commons/connect-db.php';
 require_once './commons/model.php';
@@ -18,15 +18,23 @@ $arrRouteNeedAuth = [
     
 ]; 
 
+
+
+// match($act) {
+//     '/' => homeIndex(),
+
+//     // Authen
+//     'login' => authenShowFormLogin(),
+//     'logout' => authenLogout(),
+// };
+if($act == 'home'){
+    homeIndex();
+    // $products = listAll('products');
+    // require_once PATH_VIEW . 'home.php';
+}else if($act == 'danhgia'){
+    danhgia();
+}
+
 // Kiểm tra xem user đã đăng nhập chưa
 middleware_auth_check($act, $arrRouteNeedAuth);
-
-match($act) {
-    '/' => homeIndex(),
-
-    // Authen
-    'login' => authenShowFormLogin(),
-    'logout' => authenLogout(),
-};
-
 require_once './commons/disconnect-db.php';

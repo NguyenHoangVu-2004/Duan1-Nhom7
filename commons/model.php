@@ -84,9 +84,9 @@ if (!function_exists('insert_get_last_id')) {
 }
 
 if (!function_exists('listAll')) {
-    function listAll($tableName) {
+    function listAll($id="id",$tableName) {
         try {
-            $sql = "SELECT * FROM $tableName ORDER BY id DESC";
+            $sql = "SELECT * FROM $tableName ORDER BY ".$id."  DESC";
 
             $stmt = $GLOBALS['conn']->prepare($sql);
 

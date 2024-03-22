@@ -14,6 +14,7 @@ try {
 
     // cài đặt chế độ trả dữ liệu
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    // echo "Connected successfully";
 } catch (PDOException $e) {
     debug("Connection failed: " . $e->getMessage());
 }
