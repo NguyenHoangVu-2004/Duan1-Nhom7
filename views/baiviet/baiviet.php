@@ -12,11 +12,11 @@
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="./assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="./assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"><img style="width: 80px;height: 80px;margin-bottom: 40px;" src="./assets/admin/img/King Clothes-logos_white.png" alt=""></i>
+                    <i class="fas fa-laugh-wink"><img style="width: 80px;height: 80px;margin-bottom: 40px;" src="assets/admin/img/King Clothes-logos_white.png" alt=""></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">King Clothes</div>
             </a>
@@ -88,23 +88,23 @@
                     <span>Khuyến mãi</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="?act=baiviet">
                     <span>Bài viết</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="?act=binhluan">
                     <span>Bình luận</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="?act=danhgia">
                     <span>Đánh giá</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="?act=noidung">
                     <span>Nội dung website</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="?act=lienhe">
                     <span>Liên hệ</span></a>
             </li>
 
@@ -154,7 +154,7 @@
 
                 <!-- MAIN CHÍNH (CẦN SỬA) -->
                 <div class="container-fluid">
-                    <h1>Đánh giá</h1>
+                    <h1>Danh sách bài viết</h1>
                     <style>
                         table {
                             text-align: center;
@@ -166,7 +166,7 @@
                             border: 1px solid black;
                         }
                         th,td{
-                            width: 300px;
+                            width: 250px;
                         }
                         table {
                             border-collapse: collapse;
@@ -174,23 +174,25 @@
                     </style>
                     <table align="center">
                         <tr>
-                            <th>ID đánh giá</th>
+                            <th>ID bài viết</th>
+                            <th>Tiêu đề</th>
+                            <th>Ảnh bài viết</th>
+                            <th>Nội dung</th>
                             <th>Ngày đăng</th>
-                            <th>Người đánh giá</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Số sao đánh giá</th>
-                            <th>Nội dung đánh giá</th>
+                            <th>Trạng thái </th>
                         </tr>
                         <?php
                         // var_dump($danhgia);
-                        foreach ($danhgia as $item) : ?>
+                        foreach ($baiviet as $item) : ?>
                             <tr>
-                                <td><?php echo $item['id_danh_gia']; ?></td>
-                                <td><?php echo $item['ngay_dang']; ?></td>
-                                <td><?= $item['ten_nguoi_dung']  ?></td>
-                                <td><?= $item['ten_san_pham'] ?></td>
-                                <td><?php echo $item['sao_danh_gia']; ?></td>
-                                <td><?php echo $item['noidung_danhgia']; ?></td>
+                                <td><?php echo $item['id_bai_viet']; ?></td>
+                                <td><?php echo $item['tieude_baiviet']; ?></td>
+                                <td>
+                                    <img src="assets/admin/img/<?=$item['anh_bai_viet']?>" alt="">
+                                </td>
+                                <td><?php echo $item['noi_dung']; ?></td>
+                                <td><?php echo $item['ngay_dang_bai']; ?></td>
+                                <td><?php echo $item['trang_thai']; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
@@ -237,21 +239,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="./assets/admin/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="./assets/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="././assets/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="./assets/admin/js/sb-admin-2.min.js"></script>
+    <script src="assets/admin/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="./assets/admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="assets/admin/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="./assets/admin/js/demo/chart-area-demo.js"></script>
-    <script src="./assets/admin/js/demo/chart-pie-demo.js"></script>
+    <script src="assets/admin/js/demo/chart-area-demo.js"></script>
+    <script src="assets/admin/js/demo/chart-pie-demo.js"></script>
 
 </body>
 

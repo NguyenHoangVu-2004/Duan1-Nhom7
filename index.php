@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Require file trong commons
 // require_once './commons/env.php';
@@ -14,9 +14,7 @@ require_file(PATH_MODEL);
 $act = $_GET['act'] ?? '/';
 
 // Biến này cần khai báo được link cần đăng nhập mới vào được
-$arrRouteNeedAuth = [
-    
-]; 
+$arrRouteNeedAuth = [];
 
 
 
@@ -27,16 +25,21 @@ $arrRouteNeedAuth = [
 //     'login' => authenShowFormLogin(),
 //     'logout' => authenLogout(),
 // };
-if($act == 'home'){
+if ($act == 'home') {
     homeIndex();
     // $products = listAll('products');
     // require_once PATH_VIEW . 'home.php';
-}else if($act == 'danhgia'){
+} else if ($act == 'danhgia') {
     danhgia();
-}else{
-
+} else if ($act == 'binhluan') {
+    binhluan();
+}else if ($act == 'lienhe') {
+    lienhe();
+}else if ($act == 'noidung') {
+    noidung();
+}else if ($act == 'baiviet') {
+    baiviet();
 }
-
 // Kiểm tra xem user đã đăng nhập chưa
 middleware_auth_check($act, $arrRouteNeedAuth);
 require_once './commons/disconnect-db.php';
