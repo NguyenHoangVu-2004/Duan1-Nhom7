@@ -154,8 +154,22 @@
 
                 <!-- MAIN CHÍNH (CẦN SỬA) -->
                 <div class="container-fluid">
-                    <h1>Nội dung website</h1>
-                    <style>
+                    <h1>Thêm nội dung website</h1>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <label for="">Tên trang web</label>
+                        <input type="text" name="ten_trang_web">
+                        <label for="">Ảnh</label>
+                        <input type="file" name="anh">
+                        <label for="">Nội dung</label>
+                        <input type="text" name="noi_dung">
+                        <label for="">Link liên kết</label>
+                        <input type="link" name="link_lien_ket">
+                        <br>
+                        <input type="reset">
+                        <input type="submit" value="Thêm">
+
+                    </form>
+                    <!-- <style>
                         table {
                             text-align: center;
                         }
@@ -170,30 +184,15 @@
                         }
                         table {
                             border-collapse: collapse;
-                            margin-bottom: 50px;
                         }
-                        td input{
-                            background-color: red;
-                            border: none;
-                            color: white;
-                            border-radius: 3px;
-                        }
-                        .button input{
-                            background-color: #4066D4;
-                            border:none;
-                            color: white;
-                            padding: 10px 20px;
-                            border-radius: 3px;
-                        }
-                    </style>
-                    <table align="center">
+                    </style> -->
+                    <!-- <table align="center">
                         <tr>
                             <th>ID nội dung</th>
                             <th>Tên trang web</th>
                             <th>Ảnh (Logo,...)</th>
                             <th>Nội dung </th>
                             <th>Link liên kết </th>
-                            <th>Hành động </th>
                         </tr>
                         <?php
                         // var_dump($danhgia);
@@ -206,16 +205,9 @@
                                 </td>
                                 <td><?php echo $item['noi_dung']; ?></td>
                                 <td><?php echo $item['link_lien_ket']; ?></td>
-                                <td>
-                                    <a href="?act=suanoidung&id="><input type="submit" value="Sửa" ></a>
-                                    <a href="?act=suanoidung&id=" onclick="return confirm('Bạn có chắc chăn muốn xoá nội dung này không?')"><input type="submit" value="Xoá" ></a>
-                                </td>
                             </tr>
                         <?php endforeach; ?>
-                    </table>
-                    <div class="button">
-                        <a href="?act=themnoidung"><input type="submit" value="Thêm nội dung" name="them"></a>
-                    </div>
+                    </table> -->
                 </div>
             </div>
             <!-- Footer -->

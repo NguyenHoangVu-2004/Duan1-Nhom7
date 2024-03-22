@@ -7,3 +7,7 @@ function noidung()
     // var_dump($danhgia);
     require_once 'views/noidungwebsite/noidungwebsite.php';
 }
+function themnoidung()
+{
+    $sql=""
+}
