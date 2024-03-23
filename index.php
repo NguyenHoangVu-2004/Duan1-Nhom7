@@ -41,6 +41,10 @@ if ($act == 'home') {
     baiviet();
 }else if ($act == 'themnoidung') {
     baiviet();
+}else if ($act == 'nguoidung'){
+    nguoidung();
+}else if ($act == 'themnguoidung'){
+    themnguoidung();
 }
 // Kiểm tra xem user đã đăng nhập chưa
 middleware_auth_check($act, $arrRouteNeedAuth);
